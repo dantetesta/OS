@@ -1,0 +1,14 @@
+{
+    "name": "wprevolution/os-system",
+    "description": "Sistema de Ordens de Serviço para Web Design",
+    "type": "project",
+    "require": {
+        "php": "^8.3",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

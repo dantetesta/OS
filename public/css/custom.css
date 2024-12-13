@@ -1,0 +1,110 @@
+/* Estilos personalizados */
+
+/* Mobile First */
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin-left: 0 !important;
+    }
+    
+    .main-sidebar {
+        transform: translate(-250px, 0);
+    }
+    
+    .sidebar-open .main-sidebar {
+        transform: translate(0, 0);
+    }
+    
+    .info-box {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Melhorias visuais */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,.15);
+}
+
+.info-box {
+    border-radius: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+/* Status badges */
+.badge {
+    padding: 0.5em 1em;
+    font-size: 85%;
+}
+
+/* Forms */
+.form-control {
+    border-radius: 0.25rem;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102,126,234,.25);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+.btn-primary:hover {
+    background-color: #5a6fe0;
+    border-color: #5a6fe0;
+}
+
+/* Animations */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+/* Loading states */
+[x-cloak] {
+    display: none;
+}
+
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
